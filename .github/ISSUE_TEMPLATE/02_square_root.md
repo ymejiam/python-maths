@@ -54,7 +54,7 @@ def square_root(x):
 
 ### Add a test to check the exception is raised
 
-Add the following to the `tests/test_arithmetic.py` which checks that the exception is raised.
+Add the following to the `tests/test_arithmetic.py` which checks the correct values are returned that the exception is raised.
 
 ```python
 @pytest.mark.parametrix(

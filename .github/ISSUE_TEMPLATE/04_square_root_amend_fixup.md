@@ -9,9 +9,10 @@ assignees: ""
 Use the checklist to tick off the sub-tasks as you complete them. Some of the tasks rely on material that has already
 been covered in the lesson so try and use what you have learnt. The commands are provided if required though.
 
-- [ ] Checkout the `square-root-amend-fixup` branch.
-- [ ] Rebase the branch onto `main` which should contain the custom message that was added earlier in the lesson.
-- [ ] Copy and paste the example to the docstring of the `divide()` function that shows the consequence of trying to
+- [ ] Create and switch to the `square-root-amend-fixup` branch.
+- [ ] Rebase the branch onto `main` to ensure it is up-to-date (**Hint** - you may not have all changes that have been
+      merged into `main`).
+- [ ] Copy and paste the example to the docstring of the `square_root()` function that shows the consequence of trying to
       divide by zero.
 - [ ] Commit your changes with an appropriate error message.
 - [ ] Correct the spelling error
@@ -20,14 +21,14 @@ been covered in the lesson so try and use what you have learnt. The commands are
 You have now used `git commit --amend`, lets try `git commit --fixup`.
 
 - [ ] Make an empty commit.
-- [ ] Add another example to the `divide()` function's example section.
-- [ ] Commit the change as a fixup.
+- [ ] Add another example to the `square_root()` function's example section.
+- [ ] Commit the change as a fixup to the commit which added the first example.
 - [ ] Perform an interactive rebase to automatically squash the changes.
 - [ ] Remove the empty commit and push your changes.
 - [ ] Make a pull request and once approved merge.
-- [ ] Delete your local `zero-division-amend-fixup` branch
+- [ ] Delete your local `square-root-amend-fixup` branch
 
-## Checkout the `zero-division-amend-fixup` branch
+## Checkout the `square-root-amend-fixup` branch
 
 This branch doesn't exist so needs creating.
 
