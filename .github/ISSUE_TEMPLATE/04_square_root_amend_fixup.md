@@ -1,7 +1,7 @@
 ---
-name: Square Root - Amend and Fixup
+name: 04 - Square Root - Amend and Fixup
 about: Instructions on amending and fixup the Zero Division branch.
-title: "03 Square Root Amend and Fixup"
+title: "Square Root Amend and Fixup"
 labels: enhancement, help wanted
 assignees: ""
 ---
