@@ -64,15 +64,3 @@ def test_multiply(x: int | float, y: int | float, expected: int | float) -> None
 def test_divide(x: int | float, y: int | float, expected: int | float) -> None:
     """Test the divide function."""
     assert arithmetic.divide(x, y) == pytest.approx(expected)
-
-
-@pytest.mark.parametrize(  # type: ignore[misc]
-    ("x", "y"),
-    [
-        pytest.param(10, 0, id="Divide by zero"),
-    ],
-)
-def test_divide_zerodivision_error(x: int | float, y: int | float) -> None:
-    """Test ZeroDivision is raised."""
-    with pytest.raises(ZeroDivisionError):
-        arithmetic.divide(x, y)

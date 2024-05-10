@@ -1,7 +1,7 @@
 ---
-name: Add Square Root Function
+name: 02 - Add Square Root Function
 about: Instructions on adding a Square Root function to the Arithmetic module
-title: "02 Add a square root function and test"
+title: "Add a square root function and test"
 labels: enhancement, help wanted
 assignees: ""
 ---
@@ -57,7 +57,7 @@ def square_root(x):
 Add the following to the `tests/test_arithmetic.py` which checks the correct values are returned that the exception is raised.
 
 ```python
-@pytest.mark.parametrix(
+@pytest.mark.parametrize(
     ("x", "target"),
     [
         pytest.mark(4, 2, id="square root of 4"),

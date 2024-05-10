@@ -1,7 +1,7 @@
 ---
-name: Add Zero Division Exception
+name: 01 - Add Zero Division Exception
 about: Instructions on adding a Zero Division exception to the divide function
-title: "01 Add zero division exception and test"
+title: "Add zero division exception and test"
 labels: enhancement, help wanted
 assignees: ""
 ---
@@ -36,8 +36,10 @@ With the following code which raises a custom exception message.
 ```python
 try:
     return x / y
-except ZeroDivsionError as e:
-    raise e("You can not divide by 0, please choose another value for 'y'.")
+except ZeroDivisionError as e:
+    raise ZeroDivisionError(
+        "You can not divide by 0, please choose another value for 'y'."
+    ) from e
 ```
 
 ### Add a test to check the exception is raised
@@ -46,9 +48,9 @@ Add the following to the `tests/test_arithmetic.py` which checks that the except
 
 ```python
 def test_divide_zero_division_exception() -> None:
-    """Test that a ZeroDivsionError is raised by the divide() function."""
+    """Test that a ZeroDivisionError is raised by the divide() function."""
     with pytest.raises(ZeroDivisionError):
-        divide(2, 0)
+        arithmetic.divide(2, 0)
 ```
 
 ### Save, stage, commit your changes
