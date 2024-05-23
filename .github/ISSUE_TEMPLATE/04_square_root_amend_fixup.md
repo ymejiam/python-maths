@@ -64,7 +64,6 @@ We can improve the function by changing it to the following.
 ```python
 if x < 0:
     print("WARNING : you have supplied a negative number, the square roof is complex.")
-    return (x) ** (1 / 2)
 return x ** (1 / 2)
 ```
 
