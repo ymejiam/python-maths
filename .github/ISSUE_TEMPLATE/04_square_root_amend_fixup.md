@@ -47,7 +47,7 @@ git switch -
 git rebase main
 ```
 
-## Switch to using Numpy `sqrt()`
+## Add a warning about square roots of negative numbers
 
 Currently the `arithmetic.square_root()` function has a problem, it returns the square root of negative numbers.
 
@@ -61,11 +61,11 @@ Obviously this is wrong as square roots of negative numbers should be complex.
 
 We can improve the function by changing it to the following.
 
-```bash
-    if x < 0:
-        print("WARNING : you have supplied a negative number, the square roof is complex.")
-        return (x) ** (1 / 2)
-    return x ** (1 / 2)
+```python
+if x < 0:
+    print("WARNING : you have supplied a negative number, the square roof is complex.")
+    return (x) ** (1 / 2)
+return x ** (1 / 2)
 ```
 
 ## Commit your changes
@@ -80,8 +80,8 @@ git commit -m "Adds warning to square_root() if number is negative"
 Did you spot it? The example above had `roof` instead of `root`. Correct this in the docstring so it reads as shown
 below.
 
-```bash
-        print("WARNING : you have supplied a negative number, the square roof is complex.")
+```python
+print("WARNING : you have supplied a negative number, the square roof is complex.")
 ```
 
 ## Amend the previous commit
@@ -119,10 +119,12 @@ git commit --fixup HEAD~1
 
 ## Perform an interactive rebase to automatically squash the changes
 
-Again you will either need the hash of the commit which you looked up in the previous step or you can use `HEAD~1`.
+You will either need the hash of the commit _before_ the one you are fixing up (use `git logp` to find this) or
+you can use `HEAD~3` (the fixup itself is currently a commit and so you have to go back an extra commit relative to
+`HEAD`).
 
 ```bash
-git rebase -i --autosquash HEAD~1
+git rebase -i --autosquash HEAD~3
 ```
 
 A text editor should open and the commit with the message staring `fixup!` should have `fixup` and not `pick` next to
