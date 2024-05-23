@@ -49,8 +49,8 @@ git rebase main
 
 ## Add example of zero division to docstring
 
-Copy and paste the following in, note it deliberately contains a spelling error as we will be fixing them. Make sure
-the code is correctly indented.
+Copy and paste the following into the `Examples` section of the `divide()` function in the `pythonmaths/arithmetic.py`
+file. Note it deliberately contains a spelling error as we will be fixing them. Make sure the code is correctly indented.
 
 ```bash
     >>> arithmetic.divide(3, 0)
@@ -61,7 +61,7 @@ the code is correctly indented.
 
 ```bash
 git add -u
-git commit -m "Adding zero division example to divide docstring"
+git commit -m "docs: Adding zero division example to divide docstring"
 ```
 
 ## Correct the spelling error
@@ -91,6 +91,8 @@ git commit --allow-empty -m "Empty commit to try out fixup"
 
 ## Add another example to the `divide()` function's example section
 
+Add another example to the `Examples` section of the `divide()` function in the `pythonmaths/arithmetic.py` file.
+
 ```bash
     >>> arithmetic.divide(1, 0.1)
         10
@@ -108,10 +110,12 @@ git commit --fixup HEAD~1
 
 ## Perform an interactive rebase to automatically squash the changes
 
-Again you will either need the hash of the commit which you looked up in the previous step or you can use `HEAD~1`.
+You will either need the hash of the commit _before_ the one you are fixing up (use `git logp` to find this) or
+you can use `HEAD~3` (the fixup itself is currently a commit and so you have to go back an extra commit relative to
+`HEAD`).
 
 ```bash
-git rebase -i --autosquash HEAD~1
+git rebase -i --autosquash HEAD~3
 ```
 
 A text editor should open and the commit with the message staring `fixup!` should have `fixup` and not `pick` next to
