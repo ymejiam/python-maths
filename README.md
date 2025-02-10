@@ -1,6 +1,6 @@
 # python-maths
 
-Basic math functions in Python
+Basic math functions in Python. This repository is used in the [Git Collaboration][git_collab] course.
 
 ## Working in a Conda environment
 
@@ -33,4 +33,5 @@ pytest
 ```
 
 [conda]: https://conda.io/projects/conda/en/latest/user-guide/install/index.html
+[git_collab]: https://fair2-for-research-software.github.io/git-collaboration/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
