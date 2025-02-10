@@ -1,4 +1,4 @@
-# python-math
+# python-maths
 
 Basic math functions in Python
 
