@@ -72,10 +72,10 @@ def test_divide_zero_division_exception() -> None:
 @pytest.mark.parametrize(
     ("x", "target"),
     [
-        pytest.mark(4, 2, id="square root of 4"),
-        pytest.mark(9, 3.0, id="square root of 9"),
-        pytest.mark(25, 5.0, id="square root of 25"),
-        pytest.mark(2, 1.4142135623730951, id="square root of 2"),
+        pytest.param(4, 2, id="square root of 4"),
+        pytest.param(9, 3.0, id="square root of 9"),
+        pytest.param(25, 5.0, id="square root of 25"),
+        pytest.param(2, 1.4142135623730951, id="square root of 2"),
     ],
 )
 def test_square_root(x: int | float, target: int | float) -> None:
