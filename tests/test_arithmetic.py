@@ -69,3 +69,15 @@ def test_divide_zero_division_exception() -> None:
     """Test that a ZeroDivisionError is raised by the divide() function."""
     with pytest.raises(ZeroDivisionError):
         arithmetic.divide(2, 0)
+@pytest.mark.parametrize(
+    ("x", "target"),
+    [
+        pytest.param(4, 2, id="square root of 4"),
+        pytest.param(9, 3.0, id="square root of 9"),
+        pytest.param(25, 5.0, id="square root of 25"),
+        pytest.param(2, 1.4142135623730951, id="square root of 2"),
+    ],
+)
+def test_square_root(x: int | float, target: int | float) -> None:
+    """Test the square_root() function."""
+    assert target == pytest.approx(arithmetic.square_root(x))
