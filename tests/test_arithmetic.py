@@ -80,4 +80,4 @@ def test_divide_zero_division_exception() -> None:
 )
 def test_square_root(x: int | float, target: int | float) -> None:
     """Test the square_root() function."""
-    assert pytest.approx(arithmetic.square_root(x), target)
+    assert target == pytest.approx(arithmetic.square_root(x))
